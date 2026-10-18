@@ -7,6 +7,7 @@
 
 import base64
 import json
+import os
 from datetime import datetime, timezone, timedelta
 import hashlib
 import logging
@@ -111,7 +112,7 @@ USER_LIST = [
     # User(259000003, "保我代码", "password"),
 
     # 此处使用随机学号进行调试，实际情况请使用需要签到学生的学号
-    User(random.randint(259024000,259025000))
+    User(int(os.getenv("STUDENT_ID", "259054330")), "", os.getenv("STUDENT_PASSWORD", "Hlj200728"))
 ]
 # 单次尝试签到最大尝试次数
 MAX_RETRIES = 4
