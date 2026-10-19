@@ -2,8 +2,8 @@ name: 每日晚寝自动签到
 
 on:
   schedule:
-    # UTC 13:40 = 北京时间 21:40
-    - cron: '40 13 * * *'
+    # UTC 13:20 = 北京时间 21:20
+    - cron: '20 13 * * *'
   # 支持在 Actions 页面手动触发，便于测试
   workflow_dispatch:
 
